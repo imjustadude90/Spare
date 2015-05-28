@@ -754,7 +754,17 @@ label+#moresearchinfo {
 .disabled .morelink:hover .nub {
     display: none;
 }
+/*Restricted Button*/
 
+.disabled .morelink .nub,
+.disabled .morelink:hover .nub,
+.side div.morelink:hover:after {
+    display: none;
+}
+.disabled .morelink,
+.disabled .morelink:hover {
+    background-image: none;
+}
 /*Subscribe Button*/
 
 .fancy-toggle-button .active,

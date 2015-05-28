@@ -472,12 +472,11 @@ body {
 	margin: 10px 15px;
 	font-weight: 300;
 	font-style: italic;
-	text-indent: 35px;
+	text-indent: 10px;
 }
 .commentarea .md blockquote:before,  .link .usertext-body .md blockquote:before{
 	content: "";
-	position: absolute;
-	margin: 0px 0px;
+	float:left;
 	width: 26px;
 	height: 18px;
 	background: url(%%spritesheet%%) no-repeat;

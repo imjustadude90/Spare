@@ -920,9 +920,9 @@ label+#moresearchinfo {
 }
 
 .side .md h5+blockquote {
-    background-color: #F9F9F9;
+    background-color: #EAEAEA;
     padding: 10px 0px 10px 0px;
-    border: 1px solid #E7E8EA;
+    border: 1px solid #D0D0D0;
     margin: 0px 10px 10px 10px;
 	font-style: normal;
 	font-weight: normal;
@@ -933,7 +933,7 @@ label+#moresearchinfo {
 	position: absolute;
 	margin: -11px 0px;
 	right: 21px;
-	background: #E7E8EA;
+	background: #D0D0D0;
 	border-top: solid 8px #fff;
 	border-right: solid 8px #fff;
 	border-left: solid 8px transparent;

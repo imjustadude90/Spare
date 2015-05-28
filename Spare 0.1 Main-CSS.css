@@ -447,24 +447,12 @@ body {
 	position: relative;
 }
 
-.md code:before{
-	content: "";
-	position: absolute;
-	margin: 0px 0px;
-	right: 0px;
-	width: 32px;
-	height: 17px;
-	background: url(%%spritesheet%%) no-repeat;
-	background-position: -124px -102px;
-}
-
 .md code, .md pre{
 	border: 1px solid #E7E8EA;
 	border-left: 5px solid #E7E8EA;
 	background: #F9F9F9;
 	
 }
-
 
 .md pre{margin:5px 8px;}
 
@@ -614,7 +602,7 @@ form#search {
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
-.search-page #search input[type=submit]{position:relative; margin-top:-2px; right:25px;}
+.search-page #search input[type=submit]{position:relative; margin-top:0; right:25px;}
 #search input[type=submit]:hover {
     background: #1882d6 url(%%spritesheet%%);
     background-position: 0px -74px;
@@ -797,7 +785,9 @@ label+#moresearchinfo {
 
 .side .spacer .md blockquote h1,
 .side .spacer .md blockquote h2,
-.side .spacer .md blockquote h3
+.side .spacer .md blockquote h3,
+.side .spacer .md blockquote h4,
+.side .spacer .md blockquote h5
 {
     color: #444;
 	margin: 0px 10px 10px 10px;
@@ -806,7 +796,9 @@ label+#moresearchinfo {
 
 .side .spacer .md blockquote h1:after,
 .side .spacer .md blockquote h2:after,
-.side .spacer .md blockquote h3:after{
+.side .spacer .md blockquote h3:after,
+.side .spacer .md blockquote h4:after,
+.side .spacer .md blockquote h5:after{
   content: "";
   height: 3px;
   background-color: #444;
@@ -817,7 +809,9 @@ label+#moresearchinfo {
 }
 .side .spacer .md blockquote h1:hover:after,
 .side .spacer .md blockquote h2:hover:after,
-.side .spacer .md blockquote h3:hover:after
+.side .spacer .md blockquote h3:hover:after,
+.side .spacer .md blockquote h4:hover:after,
+.side .spacer .md blockquote h5:hover:after
 {
 	width: 256px;
 }
@@ -837,7 +831,7 @@ label+#moresearchinfo {
 }
 
 
-.side .md h1+blockquote p, .side .md h2+blockquote p, .side .md h3+blockquote p{
+.side .md h1+blockquote p, .side .md h2+blockquote p, .side .md h3+blockquote p, .side .md h4+blockquote p, .side .md h5+blockquote p{
 	margin:10px 10px;
 }
 
@@ -889,6 +883,48 @@ label+#moresearchinfo {
 	margin: -11px 0px;
 	right: 21px;
 	background: #e3c758;
+	border-top: solid 8px #fff;
+	border-right: solid 8px #fff;
+	border-left: solid 8px transparent;
+	border-bottom: solid 8px transparent;
+}
+
+.side .md h4+blockquote {
+    background-color: #e0f2ff;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid #C1DEF2;
+    margin: 0px 10px 10px 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.side .md h4+blockquote:before {
+	content: "";
+	position: absolute;
+	margin: -11px 0px;
+	right: 21px;
+	background: #C1DEF2;
+	border-top: solid 8px #fff;
+	border-right: solid 8px #fff;
+	border-left: solid 8px transparent;
+	border-bottom: solid 8px transparent;
+}
+
+.side .md h5+blockquote {
+    background-color: #F9F9F9;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid #E7E8EA;
+    margin: 0px 10px 10px 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.side .md h5+blockquote:before {
+	content: "";
+	position: absolute;
+	margin: -11px 0px;
+	right: 21px;
+	background: #E7E8EA;
 	border-top: solid 8px #fff;
 	border-right: solid 8px #fff;
 	border-left: solid 8px transparent;
@@ -1436,7 +1472,7 @@ body > div.content {
     color: #000;
 }
 
-/* nested commentary boxes - Thanks to /u/creesch :) */
+/* nested commentary boxes - Thanks to /u/creesch*/
 
 .sitetable.nestedlisting>.comment,
 .res .sitetable.nestedlisting>.comment {

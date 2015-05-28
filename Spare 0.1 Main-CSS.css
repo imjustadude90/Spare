@@ -614,6 +614,7 @@ form#search {
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+.search-page #search input[type=submit]{position:relative; margin-top:-2px; right:25px;}
 #search input[type=submit]:hover {
     background: #1882d6 url(%%spritesheet%%);
     background-position: 0px -74px;

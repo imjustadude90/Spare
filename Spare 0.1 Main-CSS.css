@@ -434,9 +434,7 @@ body {
 	width: 278px;
 }
 
-.md code{
-	border:0;
-	background: #F9F9F9 url:;
+.md > pre > code, .md > p > code{
 	font-family: "Courier New", Courier, monospace;
 	font-weight: normal;
 	font-style: normal;
@@ -445,6 +443,17 @@ body {
 	box-sizing: border-box;
 	margin: 8px 0px;
 	position: relative;
+}
+
+.md > pre > code:before{
+	content: "";
+	position: absolute;
+	margin: 0px 0px;
+	right: 0px;
+	width: 32px;
+	height: 17px;
+	background: url(%%spritesheet%%) no-repeat;
+	background-position: -124px -102px;
 }
 
 .md code, .md pre{

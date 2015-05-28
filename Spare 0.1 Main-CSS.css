@@ -1,7 +1,7 @@
 /*
 			Version 0.1
 			Stylesheet by Imjustadude90
-			Last modified: 15 MAY 2015
+			Last modified: 28 MAY 2015
 
 			--------------------------------------------------------------------------
             [Changelog]
@@ -134,10 +134,9 @@ body {
 #header {
     border-bottom: 1px solid #e7e8ea;
     position: relative;
-    background: #53A9EE;
-    background-image: url(%%header-img%%);
+    background-color: #53A9EE;
     background-size: cover;
-    height: 150px;
+    height: 110px;
 }
 #header-img.default-header,
 #header-img {
@@ -952,26 +951,30 @@ body > div.content {
 
 .thumbnail.nsfw {
     height: 70px;
-    background: #ff0000 url(%%spritesheet%%);
+	background-color:#ff0000;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -249px;
     background-repeat: no-repeat
 }
 .thumbnail.self {
     height: 70px;
-    background: #53a9ee url(%%spritesheet%%);
+	background-color:#53a9ee;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -179px;
     background-repeat: no-repeat
 }
 .thumbnail.default {
     height: 70px;
-    background: #53a9ee url(%%spritesheet%%);
+	background-color:#53a9ee;
+    background-image: url(%%spritesheet%%);
     background-position: -70px -249px;
     background-repeat: no-repeat
 }
 .thing.stickied a.thumbnail {
     height: 70px;
     width: 70px;
-    background: #39a039 url(%%spritesheet%%);
+	background-color:#39a039;
+    background-image: url(%%spritesheet%%);
     background-position: -70px -179px;
     background-repeat: no-repeat
 }
@@ -1574,7 +1577,7 @@ body > div.footer-parent > p:nth-child(3):after{
 .profile-page .comment,.res-commentBoxes .comment{margin-bottom:5px!Important;border:1px solid #E7E8EA;overflow:hidden}.profile-page .trophy-area .content{background-color:#fff}.profile-page .giftgold{margin-left:10px;margin-top:5px}.profile-page .titlebox .karma,.profile-page .titlebox .karma-breakdown{margin-left:10px}.profile-page .gold-accent.snoovatar-link,.profile-page .gold-expiration-info{margin:10px}.profile-page #per-sr-karma{width:280px}.profile-page .titlebox .bottom{height:15px;line-height:15px;padding-right:10px;padding-left:10px}.profile-page .server-seconds{padding-bottom:45px}.profile-page .sidecontentbox a.helplink:after{background-position:-195px -99px}@media all and (max-width:1135px){.profile-page #header-bottom-right{top:20px;border-radius:0}}@media all and (max-width:1560px){.res .profile-page #header-bottom-right{top:20px;border-radius:0}.res .profile-page#header-bottom-right:before{content:"";position:absolute;left:0;display:block;width:0;margin:-4px -28px;right:25px;background:0 0;border-top:solid 14px rgba(0,0,0,.3);border-right:solid 14px rgba(0,0,0,.3);border-left:solid 14px transparent;border-bottom:solid 14px transparent}}
 
 /*Listing Page*/
-body.with-listing-chooser.listing-chooser-collapsed .footer-parent,body.with-listing-chooser.listing-chooser-collapsed>.content{margin-left:30px}body.with-listing-chooser .footer-parent,body.with-listing-chooser>.content{margin-left:160px}body.with-listing-chooser .listing-chooser{top:150px}.trending-subreddits .trending-subreddits-content{text-align:center}
+body.with-listing-chooser.listing-chooser-collapsed .footer-parent,body.with-listing-chooser.listing-chooser-collapsed>.content{margin-left:30px}body.with-listing-chooser .footer-parent,body.with-listing-chooser>.content{margin-left:160px}body.with-listing-chooser .listing-chooser{top:110px}.trending-subreddits .trending-subreddits-content{text-align:center}
 
 /** Moderator Multi Page**/
 .multi-page .comment,.res-commentBoxes .comment{margin-bottom:5px!Important;border:1px solid #E7E8EA;overflow:hidden}.multi-page .link .rank{display:none}.multi-page .sidecontentbox .title,.multi-page .sidecontentbox.collapsible .title{border-bottom:0;margin:0;padding:0}

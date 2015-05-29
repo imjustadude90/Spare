@@ -194,7 +194,13 @@ body {
 	border-left: solid 14px transparent;
 	border-bottom: solid 14px rgba(0,0,0,0.3);
 }
-
+.res-navTop #header-bottom-right{top:20px!Important;}
+.res-navTop #header-bottom-right:before{
+	border-top: solid 14px rgba(0, 0, 0, 0.3)!Important;
+	border-right: solid 14px rgba(0, 0, 0, 0.3)!Important;
+	border-left: solid 14px transparent!Important;
+	border-bottom: solid 14px transparent!Important;
+}
 @media all and (max-width: 1380px) {
     .res #header-bottom-right {
         top: 20px;

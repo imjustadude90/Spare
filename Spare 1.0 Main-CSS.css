@@ -1965,7 +1965,10 @@ div.titlebox>div.bottom>span.flair{display:none;}
 	background-color: #fff;
 	border: 1px solid #E7E8EA;
 }
-
+.res-nightmode .wiki-page .wiki-page-content{
+	border: 1px solid rgba(39,39,39,1)!important;
+	background-color: #202020!important;
+}
 .wiki-page .wikititle{
 	margin-left: 0px;
 	background-color: #fff;
@@ -1973,12 +1976,20 @@ div.titlebox>div.bottom>span.flair{display:none;}
 	border: 1px solid #E7E8EA;
 	position: relative;
 }
-
+.res-nightmode .wiki-page .wikititle{
+	border: 1px solid rgba(39,39,39,1)!important;
+	background-color: #202020!important;
+	color: white;
+}
 .wiki-page .pageactions{
 	padding: 5px;
 	background-color: #fff;
 	border-radius: 0;
 	border: 1px solid #E7E8EA;
+}
+.res-nightmode .wiki-page .pageactions{
+	border: 1px solid rgba(39,39,39,1)!important;
+	background-color: #202020!important;
 }
 .wiki-page .pageactions .wikiaction{
 	border-radius: 0;
@@ -1997,6 +2008,11 @@ div.titlebox>div.bottom>span.flair{display:none;}
 	margin-right: -11px;
 	border-right: 1px solid #F9F9F9;
 	border-radius: 10px 0px 0px 10px;
+}
+.res-nightmode .wiki-page .wiki-page-content .wiki>.toc>ul{
+	border: 1px solid #272727;
+	border-right: 1px solid #191919;
+	background-color: #191919!important;
 }
 /*Footer*/
 body > div.footer-parent > p:nth-child(4):after{

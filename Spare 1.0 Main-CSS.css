@@ -133,8 +133,12 @@ body {
     border-bottom: 1px solid #e7e8ea;
     position: relative;
     background-color: #53A9EE;
-    background-size: cover;
     height: 110px;
+	-webkit-background-size: cover!Important;
+	-moz-background-size: cover!Important;
+	-o-background-size: cover!Important;
+	background-size: cover!Important;
+	background-position: center;
 }
 .res-nightmode #header{
 	background-color:#202020!Important;

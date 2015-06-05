@@ -1996,7 +1996,7 @@ div.titlebox>div.bottom>span.flair{display:none;}
 }
 /*Footer*/
 body > div.footer-parent > p:nth-child(4):after{
-	content: "CSS Theme by /u/Imjustadude90";
+	content: "CSS theme from /r/Spare by /u/Imjustadude90";
 	padding: 3px 0 0 5px;
 	font-size: 10px;
 	text-align: center;

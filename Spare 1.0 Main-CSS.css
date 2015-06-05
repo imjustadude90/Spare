@@ -1,17 +1,17 @@
 /*
-			Version 0.1
+			Version 1.0
 			Stylesheet by Imjustadude90
-			Last modified: 15 MAY 2015
-
-			--------------------------------------------------------------------------
-            [Changelog]
-			v0.1 - Initial Design - /r/spare Template
+			Last modified: 06 June 2015
+			
 -------------------------------------------------------------------------- */
 
 /** Main Body **/
 
 body {
     background-color: #f9f9f9;
+}
+.res-nightmode body {
+  background-color: #191919!important;
 }
 /** HEADER **/
 
@@ -36,11 +36,9 @@ body {
     line-height: 20px;
     border-bottom: 0px;
 }
+.res-nightmode #sr-header-area{background-color: rgba(0, 0, 0, 0.3)!Important;}
 #srLeftContainer {
     padding-left: 0px!Important;
-}
-.res-nightmode #sr-header-area {
-    background-color: rgba(16, 16, 16, 1)!Important;
 }
 #RESShortcutsViewport {
     margin-right: 65px!Important;
@@ -74,7 +72,7 @@ body {
 /**SR More Link **/
 
 #sr-more-link {
-    background-color: transparent;
+    background-color: rgba(18, 18, 18, 0.7);
     padding: 0px 5px 0px 10px;
     color: rgba(255, 255, 255, 0.9);
     transition: all ease .2s;
@@ -134,21 +132,18 @@ body {
 #header {
     border-bottom: 1px solid #e7e8ea;
     position: relative;
-    background: #53A9EE;
-    background-image: url(%%header-img%%);
+    background-color: #53A9EE;
     background-size: cover;
-    height: 150px;
+    height: 110px;
+}
+.res-nightmode #header{
+	background-color:#202020!Important;
+	border-bottom: 1px solid #272727!Important;
 }
 #header-img.default-header,
 #header-img {
     margin-left: 5px;
 }
-.res-nightmode #header {
-    background-color: #161616!Important;
-    border-bottom: 0px!Important;
-    box-shadow: 0px 1px 0px #161616!Important;
-}
-
 /*Header Image - Theme Snoo - Remove if necessary*/
 #header-img.default-header,
 #header-img {
@@ -194,6 +189,13 @@ body {
 	border-right: solid 14px rgba(0,0,0,0.3);
 	border-left: solid 14px transparent;
 	border-bottom: solid 14px rgba(0,0,0,0.3);
+}
+.res-navTop #header-bottom-right{top:20px!Important;}
+.res-navTop #header-bottom-right:before{
+	border-top: solid 14px rgba(0, 0, 0, 0.3)!Important;
+	border-right: solid 14px rgba(0, 0, 0, 0.3)!Important;
+	border-left: solid 14px transparent!Important;
+	border-bottom: solid 14px transparent!Important;
 }
 
 @media all and (max-width: 1380px) {
@@ -242,7 +244,7 @@ body {
 }
 
 .res-nightmode #header-bottom-right {
-    background: transparent!Important;
+	background-color: rgba(0,0,0,0.3)!Important;
 }
 #header-bottom-right .user {
     color: #efefef;
@@ -297,8 +299,9 @@ body {
 }
 #RESMainGearOverlay {
     background-image: none!important;
-    margin-top: 2px!important;
-    width: 26px!Important;
+	margin: 1px 2px 2px 0px!Important;
+	width: 30px!Important;
+	padding: 0!Important;
 }
 /**Mail**/
 
@@ -367,10 +370,20 @@ body {
 	border: 1px solid #e7e8ea;
 	border-bottom: 0px;
 }
+.res-nightmode .tabmenu li a{
+	background-color:#191919!Important;
+	border: 1px solid #272727!important;
+	color:#999!Important;
+	border-bottom: 0!Important;
+}
 .tabmenu li a:hover {
     height: 25px;
     color: #1B86DB;
     background-color: #F9F9F9;
+}
+.res-nightmode .tabmenu li a:hover{
+	color:#fff!Important;
+	background-color:#191919!Important;
 }
 .tabmenu li.selected a {
 	padding: 0px 10px;
@@ -382,6 +395,11 @@ body {
 	margin-bottom: -1px;
 	border-color: #e7e8ea;	
 }
+.res-nightmode .tabmenu li.selected a{
+	background-color: #191919!Important;
+	border-bottom: 1px solid #191919!Important;
+	color:#fff!Important;
+}
 /*Side*/
 
 .side {
@@ -390,12 +408,17 @@ body {
     margin: 10px 10px 10px 15px;
     border: 0px solid #e7e8ea;
 }
+.res-nightmode .side{background-color:transparent!Important;}
 .side .spacer {
     margin: 0px 0 12px 0
 }
 
 .side .md p{
 	margin: 10px 10px;
+}
+
+.res-nightmode .titlebox form.toggle, .res-nightmode .leavemoderator{
+	background-color: #222;
 }
 
 /*Margin Fixes*/
@@ -430,25 +453,23 @@ body {
   margin-top: 6px;
   transition: .3s ease;
 }
-
+.res-nightmode .side h1.redditname:after, .res-nightmode .profile-page .titlebox h1:after{
+	background-color:rgb(238, 238, 238);
+}
 .side h1.redditname:hover:after, .side .md h1:hover:after, .side .md h2:hover:after, .side .md h3:hover:after, .profile-page .titlebox h1:hover:after{
 	width: 278px;
 }
 
-.md code{
-	border:0;
-	background: #F9F9F9 url:;
+.md > pre > code, .md > p > code{
 	font-family: "Courier New", Courier, monospace;
 	font-weight: normal;
 	font-style: normal;
-	font-size: 0.90em!Important;
-	line-height: 1.6!Important;
 	box-sizing: border-box;
 	margin: 8px 0px;
 	position: relative;
 }
 
-.md code:before{
+.md > pre > code:before{
 	content: "";
 	position: absolute;
 	margin: 0px 0px;
@@ -465,8 +486,11 @@ body {
 	background: #F9F9F9;
 	
 }
-
-
+.res-nightmode .md code, .res-nightmode .md pre {
+	background-color: #191919!Important;
+	color: #D3D3D3!Important;
+	border-color: rgba(0,0,0,1)!Important;
+}
 .md pre{margin:5px 8px;}
 
 .commentarea .md blockquote, .link .usertext-body .md blockquote{
@@ -476,12 +500,16 @@ body {
 	margin: 10px 15px;
 	font-weight: 300;
 	font-style: italic;
-	text-indent: 35px;
+	text-indent: 10px;
+}
+.res-nightmode .commentarea .md blockquote, .res-nightmode .link .usertext-body .md blockquote{
+	background: #2C2C2C;
+	border-left: 5px solid #424242;
+	color: rgb(204, 204, 204);
 }
 .commentarea .md blockquote:before,  .link .usertext-body .md blockquote:before{
 	content: "";
-	position: absolute;
-	margin: 0px 0px;
+	float:left;
 	width: 26px;
 	height: 18px;
 	background: url(%%spritesheet%%) no-repeat;
@@ -493,24 +521,34 @@ body {
     background-color: #fff;
     border: 1px solid #e7e8ea;
 }
-
+.res-nightmode .titlebox{
+	background-color: #202020!Important;
+	border: 1px solid #272727!Important;
+}
 .sidecontentbox.collapsible,
 .sidecontentbox {
     background-color: #fff;
     border: 1px solid #e7e8ea;
+}
+.res-nightmode .sidecontentbox.collapsible, .res-nightmode .sidecontentbox{
+    background-color: #222;
+    border: 1px solid #272727;
 }
 .sidecontentbox.collapsible .content,
 .sidecontentbox .content {
     border: 0px;
 	padding: 5px 10px;
 }
-
+.res-nightmode .sidecontentbox .title h1{color:white;border: 0;}
 .sidecontentbox.collapsible .title, .sidecontentbox .title{
 	border-bottom: 3px solid #f0f0f0;
 	margin: 0px 10px 10px 10px;
 	padding: 6px 0px;
 }
-
+.res-nightmode .sidecontentbox.collapsible .title, .res-nightmode .sidecontentbox .title{
+	border-bottom: 3px solid #777;
+	background-color: #222;
+}
 .sidecontentbox.collapsible .title:after, .sidecontentbox .title:after{
 	content: "";
 	background-color: #53A9EE;
@@ -519,6 +557,9 @@ body {
 	display: block;
 	position: absolute;
 	margin-top: 6px;
+}
+.res-nightmode .sidecontentbox.collapsible .title:after, .res-nightmode .sidecontentbox .title:after{
+	background-color: #fff;
 }
 .sidecontentbox a.helplink{
 	float: right;
@@ -535,6 +576,9 @@ body {
 	margin-top: 20px;
 	z-index: 10;
 }
+.res-nightmode .sidecontentbox a.helplink{
+	background-color:#777;
+}
 .sidecontentbox a.helplink:hover{
 	font-size: 11px;
 	padding: 0px 35px 0px 10px;
@@ -546,15 +590,24 @@ body {
 	right: 0px;
 	top: -7px;
 	display: block;
-	background: #53A9EE url(%%spritesheet%%) no-repeat;
+	background-color: #53A9EE;
+	background-image:  url(%%spritesheet%%);
+	background-repeat:no-repeat;
 	background-position: -165px -99px;
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-	-webkit-box-shadow: 0px 0px 3px #0273CD;
-	-moz-box-shadow: 0px 0px 3px #0273CD;
-	box-shadow: 0px 0px 3px #0273CD;	
+	-webkit-box-shadow: 0px 0px 3px #000;
+	-moz-box-shadow: 0px 0px 3px #000;
+	box-shadow: 0px 0px 3px #000;	
 }
+.res-nightmode .sidecontentbox a.helplink:after{
+	background-color: #777;
+	-webkit-box-shadow: 0px 0px 3px #000;
+	-moz-box-shadow: 0px 0px 3px #000;
+	box-shadow: 0px 0px 3px #000;	
+}
+.res-nightmode .sidecontentbox a.helplink:after:active{box-shadow: 0px 0px 7px #000;}
 
 /*Transition*/
 .sidecontentbox a.helplink:after, .sidecontentbox a.helplink, .sidecontentbox.collapsible .title:after, .sidecontentbox .title:after{
@@ -568,10 +621,10 @@ body {
 	transform: rotate(360deg);
 	-moz-transform: rotate(360deg);
 	-webkit-transform: rotate(360deg);
-	box-shadow: 0px 0px 5px #848484;
+	box-shadow: 0px 0px 5px #000;
 }
 
-.sidecontentbox a.helplink:after:active{box-shadow: 0px 0px 7px #5A5858;}
+.sidecontentbox a.helplink:after:active{box-shadow: 0px 0px 7px #000;}
 
 .sidebox.create {
     display: none;
@@ -590,16 +643,14 @@ form#search {
     outline: none;
     background-color: #fff;
 }
-.res-nightmode #search input[type=text] {
-    background-color: #161616!Important;
-    -moz-box-shadow: 0px 4px 0px #333;
-    -webkit-box-shadow: 0px 4px 0px #333;
-    box-shadow: 0px 4px 0px #333;
+.res-nightmode #search input[type=text]{
+	background-color: #202020!important;
+	border: 1px solid rgba(39,39,39,1)!important;
 }
 #search input[type=submit] {
-    background-color: transparent;
-    background: #53A9EE url(%%spritesheet%%);
-    background-position: 0px -74px;
+    background-color: #53A9EE;
+    background-image: url(%%spritesheet%%);
+    background-position: 0px -75px;
     background-repeat: no-repeat;
     height: 25px;
     width: 38px;
@@ -615,14 +666,22 @@ form#search {
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+.res-nightmode #search input[type=submit] {
+	background-color: transparent!Important;
+	opacity: 0.6;
+}
+.res-nightmode #search input[type=submit]:hover {opacity: 1.0;box-shadow:none;}
+.res-nightmode #search input[type=submit]:active {box-shadow:none;}
+
+.search-page #search input[type=submit]{position:relative; margin-top:0; right:25px;}
 #search input[type=submit]:hover {
     background: #1882d6 url(%%spritesheet%%);
-    background-position: 0px -74px;
+    background-position: 0px -75px;
     box-shadow: 0px 0px 3px #e7e8ea;
 }
 #search input[type=submit]:active {
     background: #036dc1 url(%%spritesheet%%);
-    background-position: 0px -74px;
+    background-position: 0px -75px;
     box-shadow: inset 0px 0px 5px #036dc1;
 }
 /**Search Info**/
@@ -634,6 +693,10 @@ form#search {
     margin-top: 15px;
     color: black;
     border-radius: 0px;
+}
+.res-nightmode #searchexpando{
+	background: #202020!important;
+	border: 1px solid #272727!important;
 }
 #searchexpando:after,
 #searchexpando:before {
@@ -652,18 +715,14 @@ form#search {
     border-width: 11px;
     margin-left: -11px;
 }
-.res-nightmode #searchexpando:after {
-    border-bottom-color: #161616;
-}
+.res-nightmode #searchexpando:after{border-bottom-color:#202020!important;}
 #searchexpando:before {
     border-color: rgba(194, 225, 245, 0);
     border-bottom-color: #E3C758;
     border-width: 13px;
     margin-left: -13px;
 }
-.res-nightmode #searchexpando:before {
-    border-bottom-color: #333333;
-}
+.res-nightmode #searchexpando:before{border-bottom-color:#272727!important;}
 label+#moresearchinfo {
     box-shadow: none;
     border-top: 0px;
@@ -692,6 +751,9 @@ label+#moresearchinfo {
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
 }
+.res-nightmode .side div.morelink{
+	background-color: #424242!Important;
+}
 .side div.morelink:after{
 	content: "Please read the rules before you submit!";
 	font-size: 16px;
@@ -710,6 +772,11 @@ label+#moresearchinfo {
 	box-shadow: inset 2px 0px 5px #FCC1C1;
 	transition: .2s ease;
 }
+.res-nightmode .side div.morelink:after{
+	background-color: #C04448;
+	box-shadow: inset 2px 0px 5px #202020;
+	color:#fff;
+}
 .side div.morelink:hover:after{
 	width: 400px;
 }
@@ -726,8 +793,12 @@ label+#moresearchinfo {
 .side div.morelink:hover {
     background-color: #3093E2;
 }
+.res-nightmode .side div.morelink:hover {
+    background-color: #2C2C2C!important;
+}
 .side div.submit-link .morelink .nub {
-    background: #53A9EE url(%%spritesheet%%);
+	background-color:#53A9EE;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -99px;
     background-repeat: no-repeat;
     width: 40px;
@@ -735,11 +806,15 @@ label+#moresearchinfo {
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: transparent;
     border-left: 1px solid rgba(0, 0, 0, 0.15);
 }
+.res-nightmode .side div.submit-link .morelink .nub{
+	display: block!important;
+	background-color:#2C2C2C;
+}
 .side div.submit-text .morelink .nub {
-    background: #53A9EE url(%%spritesheet%%);
+	background-color: #53A9EE;
+    background-image: url(%%spritesheet%%);
     background-position: -40px -99px;
     background-repeat: no-repeat;
     width: 40px;
@@ -747,15 +822,28 @@ label+#moresearchinfo {
     position: absolute;
     right: 0px;
     top: 0px;
-    background-color: transparent;
     border-left: 1px solid rgba(0, 0, 0, 0.15);
+}
+.res-nightmode .side div.submit-text .morelink .nub{
+	display: block!important;
+	background-color:#2C2C2C;
 }
 .side div.create .morelink .nub,
 .disabled .morelink .nub,
 .disabled .morelink:hover .nub {
     display: none;
 }
+/*Restricted Button*/
 
+.disabled .morelink .nub,
+.disabled .morelink:hover .nub,
+.disabled .morelink:hover:after {
+    display: none;
+}
+.disabled .morelink,
+.disabled .morelink:hover {
+    background-image: none;
+}
 /*Subscribe Button*/
 
 .fancy-toggle-button .active,
@@ -787,16 +875,28 @@ label+#moresearchinfo {
 
 .side .spacer .md blockquote h1,
 .side .spacer .md blockquote h2,
-.side .spacer .md blockquote h3
+.side .spacer .md blockquote h3,
+.side .spacer .md blockquote h4,
+.side .spacer .md blockquote h5
 {
     color: #444;
 	margin: 0px 10px 10px 10px;
 	border-bottom: 3px solid #F9F9F9;
 }
-
+.res-nightmode .side .spacer .md blockquote h1,
+.res-nightmode .side .spacer .md blockquote h2,
+.res-nightmode .side .spacer .md blockquote h3,
+.res-nightmode .side .spacer .md blockquote h4,
+.res-nightmode .side .spacer .md blockquote h5
+{
+    color: #fff;
+	border-bottom: 3px solid #777;
+}
 .side .spacer .md blockquote h1:after,
 .side .spacer .md blockquote h2:after,
-.side .spacer .md blockquote h3:after{
+.side .spacer .md blockquote h3:after,
+.side .spacer .md blockquote h4:after,
+.side .spacer .md blockquote h5:after{
   content: "";
   height: 3px;
   background-color: #444;
@@ -805,9 +905,18 @@ label+#moresearchinfo {
   position: absolute;
   transition: .3s ease;
 }
+.res-nightmode .side .spacer .md blockquote h1:after,
+.res-nightmode .side .spacer .md blockquote h2:after,
+.res-nightmode .side .spacer .md blockquote h3:after,
+.res-nightmode .side .spacer .md blockquote h4:after,
+.res-nightmode .side .spacer .md blockquote h5:after{
+	background-color: #fff;
+}
 .side .spacer .md blockquote h1:hover:after,
 .side .spacer .md blockquote h2:hover:after,
-.side .spacer .md blockquote h3:hover:after
+.side .spacer .md blockquote h3:hover:after,
+.side .spacer .md blockquote h4:hover:after,
+.side .spacer .md blockquote h5:hover:after
 {
 	width: 256px;
 }
@@ -817,6 +926,9 @@ label+#moresearchinfo {
 	padding: 5px 5px;
 	border-top: 1px solid #E7E8EA;
 }
+.res-nightmode .titlebox .bottom{
+	border-top: 1px solid #272727;
+}
 .side .md h1+blockquote {
 	background-color: #DBF9CE;
 	padding: 10px 0px 10px 0px;
@@ -825,9 +937,7 @@ label+#moresearchinfo {
 	font-style: normal;
 	font-weight: normal;
 }
-
-
-.side .md h1+blockquote p, .side .md h2+blockquote p, .side .md h3+blockquote p{
+.side .md h1+blockquote p, .side .md h2+blockquote p, .side .md h3+blockquote p, .side .md h4+blockquote p, .side .md h5+blockquote p{
 	margin:10px 10px;
 }
 
@@ -884,6 +994,65 @@ label+#moresearchinfo {
 	border-left: solid 8px transparent;
 	border-bottom: solid 8px transparent;
 }
+
+.side .md h4+blockquote {
+    background-color: #e0f2ff;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid #C1DEF2;
+    margin: 0px 10px 10px 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.side .md h4+blockquote:before {
+	content: "";
+	position: absolute;
+	margin: -11px 0px;
+	right: 21px;
+	background: #C1DEF2;
+	border-top: solid 8px #fff;
+	border-right: solid 8px #fff;
+	border-left: solid 8px transparent;
+	border-bottom: solid 8px transparent;
+}
+
+.side .md h5+blockquote {
+    background-color: #EAEAEA;
+    padding: 10px 0px 10px 0px;
+    border: 1px solid #D0D0D0;
+    margin: 0px 10px 10px 10px;
+	font-style: normal;
+	font-weight: normal;
+}
+
+.side .md h5+blockquote:before {
+	content: "";
+	position: absolute;
+	margin: -11px 0px;
+	right: 21px;
+	background: #D0D0D0;
+	border-top: solid 8px #fff;
+	border-right: solid 8px #fff;
+	border-left: solid 8px transparent;
+	border-bottom: solid 8px transparent;
+}
+.res-nightmode .side .md h1+blockquote, 
+.res-nightmode .side .md h2+blockquote,
+.res-nightmode .side .md h3+blockquote,
+.res-nightmode .side .md h4+blockquote,
+.res-nightmode .side .md h5+blockquote
+{
+	background-color: transparent;
+}
+.res-nightmode .side .md h1+blockquote:before,
+.res-nightmode .side .md h2+blockquote:before,
+.res-nightmode .side .md h3+blockquote:before,
+.res-nightmode .side .md h4+blockquote:before,
+.res-nightmode .side .md h5+blockquote:before
+{
+	border-top: solid 8px #202020!Important;
+	border-right: solid 8px #202020!Important;
+}
 /*Login Form*/
 
 .login-form-side {
@@ -897,10 +1066,14 @@ label+#moresearchinfo {
 /*Announcement Message*/
  /*Animation*/
  @-webkit-keyframes flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}@keyframes flash{0%,100%,50%{opacity:1}25%,75%{opacity:0}}
+ 
 /*Content*/
 
 body > div.content {
-    margin: 10px 15px 10px 15px;
+    margin: 10px 10px 10px 15px;
+}
+.res-nightmode body>div.content{
+	background:transparent!Important;
 }
 .link {
     overflow: hidden;
@@ -909,7 +1082,12 @@ body > div.content {
     background-color: #fff;
     padding: 5px 10px;
 }
-
+.res-nightmode .link{
+	border: 1px solid rgba(39,39,39,1)!important;
+	background-color: #202020!important;
+	margin-bottom: 5px!important;
+	padding: 5px 10px!important;
+}
 .link.stickied{border:1px solid #39A039;}
 
 .link .rank {
@@ -926,6 +1104,12 @@ body > div.content {
 	border: 1px solid #E7E8EA;
 	display:block;
 }
+.res-nightmode .link .rank{
+	background: #202020!important;
+	border: 1px solid rgba(39,39,39,1)!important;
+	color: #999!important;
+	min-width: 2.2ex!important;
+}
 .link.stickied .rank{
 	border: 1px solid #39A039; 
 }
@@ -934,7 +1118,9 @@ body > div.content {
   color: #228822;
   margin-left: -1px;
 }
-
+.RES-keyNav-activeElement, .commentarea .RES-keyNav-activeElement .md, .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
+    background-color: #transparent !important;
+}
 /*Thumbnails*/
 
 .thumbnail {
@@ -949,29 +1135,39 @@ body > div.content {
     -moz-box-shadow: 0 4px 2px -3px #808080;
     box-shadow: 0 4px 2px -3px #808080;
 }
-
+.res-nightmode .thumbnail{
+    -webkit-box-shadow: 0 4px 2px -3px #000;
+    -moz-box-shadow: 0 4px 2px -3px #000;
+    box-shadow: 0 4px 2px -3px #000;
+}
 .thumbnail.nsfw {
     height: 70px;
-    background: #ff0000 url(%%spritesheet%%);
+	background-color:#ff0000;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -249px;
     background-repeat: no-repeat
 }
 .thumbnail.self {
     height: 70px;
-    background: #53a9ee url(%%spritesheet%%);
+	background-color:#53a9ee;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -179px;
     background-repeat: no-repeat
 }
+.res-nightmode .thumbnail.self{background-color:#393838}
 .thumbnail.default {
     height: 70px;
-    background: #53a9ee url(%%spritesheet%%);
+	background-color:#53a9ee;
+    background-image: url(%%spritesheet%%);
     background-position: -70px -249px;
     background-repeat: no-repeat
 }
+.res-nightmode .thumbnail.default{background-color:#393838}
 .thing.stickied a.thumbnail {
     height: 70px;
     width: 70px;
-    background: #39a039 url(%%spritesheet%%);
+	background-color:#39a039;
+    background-image: url(%%spritesheet%%);
     background-position: -70px -179px;
     background-repeat: no-repeat
 }
@@ -982,69 +1178,173 @@ body > div.content {
 	color: #1B86DB;
 }
 
-
 /**EXPANDO BUTTONS**/
-/**Expando Buttons - Main CSS**/
-
+/**Main CSS**/
+.expando-button,
 .expando-button.image,
 .expando-button.video-muted,
 .expando-button.video,
 .expando-button.video.collapsed,
 .expando-button.video.expanded,
 .expando-button.selftext.collapsed,
-.expando-button.selftext.expanded {
+.expando-button.selftext.expanded,
+.res-nightmode .expando-button.image,
+.res-nightmode .res .expando-button.image.collapsedExpando,
+.res-nightmode .res .expando-button.image.expanded,
+.res-nightmode .expando-button.video-muted,
+.res-nightmode .expando-button.video,
+.res-nightmode .expando-button.video.collapsed,
+.res-nightmode .expando-button.video.expanded,
+.res-nightmode .expando-button.selftext.collapsed,
+.res-nightmode .expando-button.selftext.expanded{
     max-width: 20px!Important;
     max-height: 20px!Important;
     background-image: url(%%spritesheet%%)!important;
     cursor: pointer;
-    border-radius: 0px;
+    border-radius: 0;
+	margin: 5px 5px;
 }
 /**Expandos Styling**/
 /**Collapsed Styling **/
-
 .expando-button.video.collapsed,
 .expando-button.selftext.collapsed,
 .res .expando-button.image.collapsedExpando,
 .res .expando-button.image.gallery.collapsedExpando,
 .res .expando-button.video-muted.collapsed {
-    background-color: #fff;
-    border: 1px solid #e7e8ea;
+	background-color: #fff;
+	border: 1px solid #aeaeae;
+	opacity: 0.6;
+	transition: opacity 0.3s ease;
 }
 /**Expanded Styling**/
-
 .expando-button.video.expanded,
 .expando-button.selftext.expanded,
 .res .expando-button.image.expanded,
 .res .expando-button.image.gallery.expanded,
 .res .expando-button.video-muted.expanded,
 .res .expando-button.selftext.expanded {
-    border: 1px solid #aeaeae;
-    background-color: #fff;
+	background-color: #fff;
+	border: 1px solid #aeaeae;
+	opacity: 1.0;
 }
 /** Collapsed Hover Styling**/
-
 .expando-button.video.collapsed:hover,
 .expando-button.selftext.collapsed:hover,
 .res .expando-button.image.collapsedExpando:hover,
 .res .expando-button.image.gallery.collapsedExpando:hover,
 .res .expando-button.video-muted.collapsed:hover {
-    border: 1px solid #aeaeae;
-    background-color: #fff;
+	background-color: #fff;
+	border: 1px solid #aeaeae;
+    max-width: 20px;
+	opacity: 1.0;
 }
-/** Expanded Hover Styling**/
+/**Expandos Backround Image**/
+/**Image**/
+.res .expando-button.image.collapsedExpando,
+.res .expando-button.image.collapsedExpando:hover,
+.res .expando-button.image.expanded {
+    background-position: -40px -139px!important;
+}
+/**Image Gallery**/
+.res .expando-button.image.gallery.collapsedExpando,
+.res .expando-button.image.gallery.expanded,
+.res .expando-button.image.gallery {
+    background-position: -100px -139px!important;
+}
+/**Video & Video Muted**/
 
-.expando-button.video.expanded:hover,
-.expando-button.selftext.expanded:hover,
-.res .expando-button.image.expanded:hover,
-.res .expando-button.image.gallery.expanded:hover,
-.res .expando-button.video-muted.expanded:hover,
-.res .expando-button.selftext.expanded:hover {
-    border: 1px solid #aeaeae;
-    background-color: #f5f5f5;
+.expando-button.video.collapsed,
+.res .expando-button.video.collapsed,
+.res .expando-button.video-muted.collapsed
+{
+    background-position: 0px -139px!important;
+}
+.expando-button.video.expanded,
+.res .expando-button.video.expanded,
+.res .expando-button.video-muted.expanded
+{
+    background-position: -20px -139px!important;
+}
+/**Self Posts**/
+.expando-button.selftext.collapsed
+{
+	background-position: -60px -139px!important;
+}
+.expando-button.selftext.expanded,
+.expando-button.selftext.expanded:hover
+{
+    background-position: -80px -139px!important;
 }
 
+/*Nightmode Expandos*/
+
+/**Expandos Styling**/
+/**Collapsed Styling **/
+.res-nightmode .expando-button.video.collapsed,
+.res-nightmode .expando-button.selftext.collapsed,
+.res-nightmode .res .expando-button.image.collapsedExpando,
+.res-nightmode .res .expando-button.image.gallery.collapsedExpando,
+.res-nightmode .res .expando-button.video-muted.collapsed {
+	background-color: #202020;
+	border: 1px solid #f3f3f3;
+}
+/**Expanded Styling**/
+.res-nightmode .expando-button.video.expanded,
+.res-nightmode .expando-button.selftext.expanded,
+.res-nightmode .res .expando-button.image.expanded,
+.res-nightmode .res .expando-button.image.gallery.expanded,
+.res-nightmode .res .expando-button.video-muted.expanded,
+.res-nightmode .res .expando-button.selftext.expanded {
+	background-color: #202020;
+	border: 1px solid #f3f3f3;
+}
+/** Collapsed Hover Styling**/
+.res-nightmode .expando-button.video.collapsed:hover,
+.res-nightmode .expando-button.selftext.collapsed:hover,
+.res-nightmode .res .expando-button.image.collapsedExpando:hover,
+.res-nightmode .res .expando-button.image.gallery.collapsedExpando:hover,
+.res-nightmode .res .expando-button.video-muted.collapsed:hover {
+	background-color: #202020;
+	border: 1px solid #f3f3f3;
+}
+/**Expandos Backround Image**/
+/**Image**/
+.res-nightmode .res .expando-button.image.collapsedExpando,
+.res-nightmode .res .expando-button.image.collapsedExpando:hover,
+.res-nightmode .res .expando-button.image.expanded {
+    background-position: -40px -159px!important;
+}
+/**Image Gallery**/
+.res-nightmode .res .expando-button.image.gallery.collapsedExpando,
+.res-nightmode .res .expando-button.image.gallery.expanded,
+.res-nightmode .res .expando-button.image.gallery {
+    background-position: -100px -159px!important;
+}
+/**Video & Video Muted**/
+
+.res-nightmode .expando-button.video.collapsed,
+.res-nightmode .res .expando-button.video.collapsed,
+.res-nightmode .res .expando-button.video-muted.collapsed
+{
+    background-position: 0px -159px!important;
+}
+.res-nightmode .expando-button.video.expanded,
+.res-nightmode .res .expando-button.video.expanded,
+.res-nightmode .res .expando-button.video-muted.expanded
+{
+    background-position: -20px -159px!important;
+}
+/**Self Posts**/
+.res-nightmode .expando-button.selftext.collapsed
+{
+	background-position: -60px -159px!important;
+}
+.res-nightmode .expando-button.selftext.expanded,
+.res-nightmode .expando-button.selftext.expanded:hover
+{
+    background-position: -80px -159px!important;
+}
 /**Comment Area Styling**/
-
 
 .commentarea .expando-button.video.collapsed,
 .commentarea .expando-button.selftext.collapsed,
@@ -1072,68 +1372,14 @@ body > div.content {
     background-color: transparent!Important;
     border: 0!Important;
 	vertical-align:middle!Important;
+	box-shadow: none!Important;
+	margin: 0px 2px!Important;
 }
 
+.profile-page .comment .expando-button, .mutli-page .comment .expando-button{margin: 0px 3px 5px 5px!Important;vertical-align: middle!Important;}
 
-
-/**Expandos Backround Image Position**/
-/**Image**/
-
-.res .expando-button.image.collapsedExpando {
-    background-position: -40px -139px!important;
-}
-/*Hover*/
-
-.res .expando-button.image.collapsedExpando:hover,
-.res .expando-button.image.expanded {
-    background-position: -40px -159px!important;
-}
-/**Image Gallery**/
-
-.res .expando-button.image.gallery.collapsedExpando,
-.res .expando-button.image.gallery {
-    background-position: -100px -139px!important;
-}
-/*Hover and Expanded*/
-
-.res .expando-button.image.gallery.collapsedExpando:hover,
-.res .expando-button.image.gallery.expanded {
-    background-position: -100px -159px!important;
-}
-/**Video & Video Muted**/
-
-.expando-button.video.collapsed,
-.res .expando-button.video.collapsed,
-.res .expando-button.video-muted.collapsed {
-    background-position: 0px -139px!important;
-}
-/*Hover*/
-
-.expando-button.video.collapsed:hover,
-.res .expando-button.video.collapsed:hover,
-.res .expando-button.video-muted.collapsed:hover {
-    background-position: 0px -159px!important;
-}
-/*Expanded Hover*/
-
-.expando-button.video.expanded,
-.res .expando-button.video.expanded,
-.res .expando-button.video-muted.expanded {
-    background-position: -20px -139px!important;
-}
-/**Self Posts**/
-
-.expando-button.selftext.collapsed {
-    background-position: -60px -139px!important;
-}
-/*Hover*/
-
-.link .entry .expando-button.selftext.collapsed:hover,
-.link .entry .expando-button.selftext.expanded:hover,
-.expando-button.selftext.expanded {
-    background-position: -60px -159px!important;
-}
 /**END EXPANDO BUTTONS**/
+
 /*Vote Arrows**/
 
 .arrow {
@@ -1160,6 +1406,44 @@ body > div.content {
 .arrow.downmod {
 	background-image: url(%%spritesheet%%);
     background-position: -38px -85px;
+}
+/*Gold only*/
+.gold-only .arrow.upmod {
+background-image: url(%%spritesheet%%) !important;
+background-position: -30px -29px;
+background-repeat: no-repeat
+}
+.gold-only .arrow.downmod {
+background-image: url(%%spritesheet%%) !important;
+background-position: -30px -43px;
+background-repeat: no-repeat
+}
+
+/**Nightmode Arrows**/
+.res-nightmode .arrow {
+    background-image: url(%%spritesheet%%) !important;
+    height: 14px!important;
+    width: 22px!important;
+    background-color: transparent;
+}
+.res-nightmode .comment .arrow {
+    margin-bottom: 5px!Important;
+}
+.res-nightmode .arrow.up,
+.res-nightmode .arrow.up:hover {
+    background: url(%%spritesheet%%) -60px -71px no-repeat!Important;
+}
+.res-nightmode .arrow.upmod,
+.res-nightmode .arrow.upmod:hover {
+    background: url(%%spritesheet%%) -38px -71px no-repeat!Important;
+}
+.res-nightmode .arrow.down,
+.res-nightmode .arrow.down:hover {
+    background: url(%%spritesheet%%) -60px -85px no-repeat!Important;
+}
+.res-nightmode .arrow.downmod,
+.res-nightmode .arrow.downmod:hover {
+    background: url(%%spritesheet%%) -38px -85px no-repeat!Important;
 }
 .arrow.upmod:focus {
 	background-image: url(%%spritesheet%%);
@@ -1224,12 +1508,20 @@ body > div.content {
     margin-bottom: 10px;
 	width: 523px;
 }
+.res-nightmode .submit-page .formtabs-content{
+	background-color: #202020;
+	border: 1px solid #272727;
+}
 .submit-page .tabmenu.formtab .selected a {
     background-color: #fff;
     color: #1B86DB;
     border: 1px solid #e7e8ea;
 	border-bottom: 1px solid #FFF!important;
 	margin-left:0px;
+}
+.res-nightmode .submit-page .tabmenu.formtab .selected a{
+	border-bottom: 1px solid #202020!important;
+	background-color: #202020!important;
 }
 .tabmenu.formtab a {
 	border: 1px solid #e7e8ea;
@@ -1251,6 +1543,16 @@ body > div.content {
 	width: 460px;
 	transition: width .25s
 }
+.res-nightmode .submit-page .roundfield textarea,
+.res-nightmode .submit-page .roundfield input[type=text], 
+.res-nightmode .submit-page .roundfield input[type=url],
+.res-nightmode .submit-page .roundfield input[type=hidden]
+ {
+	border: 1px solid #202020!Important;
+	background-color: #2C2C2C!Important;
+	color: #BEBEBE;
+	outline:0;
+}
 .submit-page .roundfield textarea:focus,
 .submit-page .roundfield input[type=text]:focus, 
 .submit-page .roundfield input[type=url]:focus,
@@ -1265,13 +1567,18 @@ body > div.content {
 .submit-page .roundfield {
     background-color: #fff;
 }
-
+.res-nightmode .submit-page .roundfield{
+	background-color: #202020!Important;
+}
 .submit-page #reddit-field{
 	background-color:#F9F9F9;
 	border: 1px solid #E7E8EA;
 	border-radius:0;
 }
-
+.res-nightmode .submit-page #reddit-field{
+	border: 1px solid #121212!important;
+	background-color: #191919!important;
+}
 #newlink > div.formtabs-content > div:nth-child(6) > div{
 	background-color: #E0F2FF;
 	border: 1px solid #C1DEF2;
@@ -1284,9 +1591,17 @@ body > div.content {
 	border: 1px solid #e3c758;
 	border-radius: 0;
 }
-
+.res-nightmode #newlink > div.formtabs-content > div:nth-child(6) > div,
+.res-nightmode #newlink > div.formtabs-content > div:nth-child(7) > div
+{
+	border: 1px solid #121212!important;
+	background-color: #191919!important;
+}
 .submit-page .roundfield .title{
     color: #686868;
+}
+.res-nightmode .submit-page .roundfield .title{
+	color:#fff;
 }
 .submit-page .roundfield .gray{display:none;}
 
@@ -1304,7 +1619,10 @@ body > div.content {
     border-radius: 0px;
 	width: 523px;
 }
-
+.res-nightmode .content.submit .info-notice{
+	background-color: #000;
+	border: 1px solid #272727;
+}
 .submit-page div.content > h1{
 	display:none;
 }
@@ -1312,7 +1630,16 @@ body > div.content {
 .submit-page div.content .submit_text h1{
 	display:block!important;
 }
-
+.res-nightmode .submit-page div.content .submit_text h1{
+	color:#fff;
+	border:0;
+}
+.res-nightmode div.submit_text.roundfield.enabled > span.content.md-container > div.md{
+	color:rgb(204, 204, 204);
+}
+.res-nightmode body .content{
+	background-color:transparent!Important;
+}
 /*Comment Page*/
 
 .comment-page .link .usertext-body .md {
@@ -1328,6 +1655,10 @@ body > div.content {
 	border-top: 0px;
 	padding: 10px;
 }
+.res-nightmode .commentarea>.usertext{
+	background-color: #161616;
+	border: 1px solid #272727;
+}
 .commentarea .menuarea {
 	color: #444;
 	padding: 8px;
@@ -1337,9 +1668,19 @@ body > div.content {
 	border-left: 1px solid #e7e8ea;
 	border-right: 1px solid #e7e8ea;
 }
+.res-nightmode .commentarea .menuarea{
+	color: #999;
+	background-color:#202020;
+	border-left: 1px solid #272727;
+	border-right: 1px solid #272727;
+	border: 0;
+}
 .commentarea .menuarea .dropdown.lightdrop .selected {
     background-color: transparent;
     color: #444;
+}
+.res-nightmode .commentarea .menuarea .dropdown.lightdrop .selected{
+	color:#fff;
 }
 .commentarea .menuarea .dropdown.lightdrop .selected:hover{
 	text-decoration:underline;
@@ -1353,6 +1694,11 @@ body > div.content {
 	color: black;
 	overflow: hidden;
 }
+.res-nightmode .commentarea .panestack-title{
+	background-color: #161616;
+	border: 1px solid #272727;
+	color:white;
+}
 /**Commentarea Sitetable**/
 
 .comments-page .sitetable {
@@ -1362,11 +1708,11 @@ body > div.content {
 /**Link Comment Area**/
 
 .link .usertext-body .md {
-	background-color: #FFFFFF;
-	border-bottom: 1px solid #e2e2e2!Important;
 	border: 0px;
-	padding-left: 0px;
 	border-radius: 0px;
+}
+.res-nightmode .link .usertext-body .md {
+	background-color: #1D1D1D!Important;
 }
 /**Link Info**/
 
@@ -1375,6 +1721,14 @@ body > div.content {
     border-radius: 0px;
 	border: 1px solid #e7e8ea;
 	padding:10px;
+}
+.res-nightmode .single-page.comments-page .linkinfo{
+	background-color: #222;
+	border: 1px solid #272727;
+}
+.res-nightmode .linkinfo .shortlink input{
+	border: 1px solid black;
+    background-color: #191919;
 }
 /**Menu Area**/
 
@@ -1386,6 +1740,11 @@ body > div.content {
 	border: 1px solid #E7E8EA;
 	background-color: #FFFFFF;
 }
+.res-nightmode .menuarea{
+	border: 1px solid #272727;
+	background-color: #202020;
+	color:#eaeaea;
+}
 .menuarea .drop-choices.lightdrop {
     background-color: #fff;
 	box-shadow: 0 6px 12px rgba(0,0,0,0.175)!important;
@@ -1393,13 +1752,24 @@ body > div.content {
 	-moz-box-shadow: 0 6px 12px rgba(0,0,0,0.175)!important;
 	border: 1px solid rgba(0,0,0,0.15)!important;
 }
+.res-nightmode .menuarea .drop-choices.lightdrop{
+	background-color: #191919!Important;
+	box-shadow: 0 6px 12px rgba(0,0,0,0.8);
+}
 .menuarea .drop-choices a.choice {
     color: #444;
-    padding: 2px 3px 1px 3px;
+	padding: 5px;
+}
+.res-nightmode .menuarea .drop-choices a.choice{
+	color:#eaeaea!Important;
 }
 .menuarea .drop-choices a.choice:hover {
     color: #000;
 	background-color: #c7def7;
+}
+.res-nightmode .menuarea .drop-choices a.choice:hover {
+    color: #fff;
+	background-color: #121212!Important;
 }
 .gold-accent.comment-visits-box {
     margin: 0px 5px 10px;
@@ -1410,10 +1780,16 @@ body > div.content {
     cursor: pointer;
     font-weight: 500;
 }
+.res-nightmode .menuarea .dropdown.lightdrop .selected{
+	color:#eaeaea;
+}
 .menuarea .dropdown.lightdrop .selected:hover {
     color: #000;
     text-decoration: none;
     cursor: pointer;
+}
+.res-nightmode .menuarea .dropdown.lightdrop .selected:hover {
+    color: #fff;
 }
 .menuarea .flat-list li a {
     color: #444;
@@ -1422,7 +1798,7 @@ body > div.content {
     color: #000;
 }
 
-/* nested commentary boxes - Thanks to /u/creesch :) */
+/* nested commentary boxes - Thanks to /u/creesch*/
 
 .sitetable.nestedlisting>.comment,
 .res .sitetable.nestedlisting>.comment {
@@ -1488,25 +1864,87 @@ body .comment .comment .comment .comment .comment .comment .comment .comment .co
 /** End Nested Comments **/
 
 /*Flair*/
-.linkflairlabel{
+.linkflairlabel, .flair{
 	background-color: #53A9EE;
-	color: white;
-	padding: 1px 5px;
-	vertical-align: middle;
+	padding: .2em .6em .3em;
+	margin: 1px 3px;
 	border: 0;
 	border-radius: 0;
+	color: #fff;
+	text-align: center;
+	line-height: 1;
+	font-size: 10px;
+	font-weight: 500;
 }
+
+.flair{box-shadow:none;}
+
+div.titlebox>div.bottom>span.flair{display:none;}
+
+.flair-black , .linkflair-black .linkflairlabel{background-color: #2A2A2A; color: white;}
+.flair-red, .linkflair-red .linkflairlabel{background-color: #EA2F36; color: white;}
+.flair-blue, .linkflair-blue .linkflairlabel{background-color: #0000A0; color: white;}
+.flair-darkblue, .linkflair-darkblue .linkflairlabel{background-color: #344a5f; color: white;}
+.flair-lightblue, .linkflair-lightblue .linkflairlabel{background-color: #3498db; color: white;}
+.flair-yellow , .linkflair-yellow .linkflairlabel{background-color: #f1c40f; color: white;}
+.flair-orange, .linkflair-orange .linkflairlabel{background-color: #f39c12; color: white;}
+.flair-green, .linkflair-green .linkflairlabel{background-color: #008000; color: white;}
+.flair-flatgreen, .linkflair-flatgreen .linkflairlabel{background-color: #2ecc71; color: white;}
+.flair-aqua, .linkflair-aqua .linkflairlabel{background-color: #bdc3c7; color: white;}
+.flair-gray, .linkflair-gray .linkflairlabel{background-color: #95a5a6; color: white;}
+.flair-purple, .linkflair-purple .linkflairlabel{background-color: #8e44ad; color: white;}
+.flair-cloud, .linkflair-cloud .linkflairlabel{background-color: #ecf0f1; color: black;}
+.flair-brown, .linkflair-brown .linkflairlabel{background-color: #8E7246; color: white;}
+.flair-pink, .linkflair-pink .linkflairlabel{background-color: #EA1B91; color: white;}
 
 .linkflair.stickied .linkflairlabel{
 	background-color: #39A039;
 	color: white;
 }
+/*Wiki Flair showcase - thanks to /u/multi-mod*/
 
+.wiki-page-flair .wiki table thead {display: none;}
+.wiki-page-flair .wiki table {color: white;}
+.wiki-page-flair .wiki td {
+    background-color: gray;
+    margin: 3px;
+	border:0;
+    display: inline-block;
+    min-width: 100px;
+    min-height: 100px;
+    text-align: center;
+    line-height: 7;
+}
+.wiki-page-flair .wiki table tr:nth-of-type(1) td:nth-of-type(1){background-color:#000}
+.wiki-page-flair .wiki table tr:nth-of-type(1) td:nth-of-type(2){background-color:#EA2F36}
+.wiki-page-flair .wiki table tr:nth-of-type(1) td:nth-of-type(3){background-color:#0000A0}
+.wiki-page-flair .wiki table tr:nth-of-type(1) td:nth-of-type(4){background-color:#344a5f}
+.wiki-page-flair .wiki table tr:nth-of-type(1) td:nth-of-type(5){background-color:#3498db}
+.wiki-page-flair .wiki table tr:nth-of-type(2) td:nth-of-type(1){background-color:#f1c40f}
+.wiki-page-flair .wiki table tr:nth-of-type(2) td:nth-of-type(2){background-color:#f39c12}
+.wiki-page-flair .wiki table tr:nth-of-type(2) td:nth-of-type(3){background-color:green}
+.wiki-page-flair .wiki table tr:nth-of-type(2) td:nth-of-type(4){background-color:#2ecc71}
+.wiki-page-flair .wiki table tr:nth-of-type(2) td:nth-of-type(5){background-color:#18E2C3;}
+.wiki-page-flair .wiki table tr:nth-of-type(3) td:nth-of-type(1){background-color:#95a5a6}
+.wiki-page-flair .wiki table tr:nth-of-type(3) td:nth-of-type(2){background-color:#8e44ad}
+.wiki-page-flair .wiki table tr:nth-of-type(3) td:nth-of-type(3){background-color:#ecf0f1;color:#000}
+.wiki-page-flair .wiki table tr:nth-of-type(3) td:nth-of-type(4){background-color:#8E7246}
+.wiki-page-flair .wiki table tr:nth-of-type(3) td:nth-of-type(5){background-color:#EA1B91}
+
+/*Flair Page*/
+.content .tabpane-content{
+	border: 1px solid #E7E8EA;
+	background-color: white;
+	padding: 8px 8px 8px 8px;
+	overflow: auto;
+	margin-top: 0px;
+}
+.res-nightmode .content .tabpane-content{background-color: rgb(16, 16, 16);}
 /*NSFW Stamp*/
 .nsfw-stamp{
 	border: 0px!Important;
 	background-color: #d10023;
-	color: white;
+	color: white!Important;
 	border-radius: 0;
 }
 .entry .buttons li.nsfw-stamp{
@@ -1557,13 +1995,16 @@ body .comment .comment .comment .comment .comment .comment .comment .comment .co
 	border-radius: 10px 0px 0px 10px;
 }
 /*Footer*/
-body > div.footer-parent > p:nth-child(3):after{
+body > div.footer-parent > p:nth-child(4):after{
 	content: "CSS Theme by /u/Imjustadude90";
 	padding: 3px 0 0 5px;
 	font-size: 10px;
 	text-align: center;
 	display: block;
 }
+.res-nightmode .footer{border: 1px solid #0F0E0E;}
+.res-nightmode .footer .col{border-left: 1px solid #0F0E0E;}
+.res-nightmode .footer .col:first-child{border:0;}
 
 /*Reddit-Theme Specific CSS*/
 
@@ -1574,7 +2015,7 @@ body > div.footer-parent > p:nth-child(3):after{
 .profile-page .comment,.res-commentBoxes .comment{margin-bottom:5px!Important;border:1px solid #E7E8EA;overflow:hidden}.profile-page .trophy-area .content{background-color:#fff}.profile-page .giftgold{margin-left:10px;margin-top:5px}.profile-page .titlebox .karma,.profile-page .titlebox .karma-breakdown{margin-left:10px}.profile-page .gold-accent.snoovatar-link,.profile-page .gold-expiration-info{margin:10px}.profile-page #per-sr-karma{width:280px}.profile-page .titlebox .bottom{height:15px;line-height:15px;padding-right:10px;padding-left:10px}.profile-page .server-seconds{padding-bottom:45px}.profile-page .sidecontentbox a.helplink:after{background-position:-195px -99px}@media all and (max-width:1135px){.profile-page #header-bottom-right{top:20px;border-radius:0}}@media all and (max-width:1560px){.res .profile-page #header-bottom-right{top:20px;border-radius:0}.res .profile-page#header-bottom-right:before{content:"";position:absolute;left:0;display:block;width:0;margin:-4px -28px;right:25px;background:0 0;border-top:solid 14px rgba(0,0,0,.3);border-right:solid 14px rgba(0,0,0,.3);border-left:solid 14px transparent;border-bottom:solid 14px transparent}}
 
 /*Listing Page*/
-body.with-listing-chooser.listing-chooser-collapsed .footer-parent,body.with-listing-chooser.listing-chooser-collapsed>.content{margin-left:30px}body.with-listing-chooser .footer-parent,body.with-listing-chooser>.content{margin-left:160px}body.with-listing-chooser .listing-chooser{top:150px}.trending-subreddits .trending-subreddits-content{text-align:center}
+body.with-listing-chooser.listing-chooser-collapsed .footer-parent,body.with-listing-chooser.listing-chooser-collapsed>.content{margin-left:30px}body.with-listing-chooser .footer-parent,body.with-listing-chooser>.content{margin-left:160px}body.with-listing-chooser .listing-chooser{top:110px}.trending-subreddits .trending-subreddits-content{text-align:center}
 
 /** Moderator Multi Page**/
 .multi-page .comment,.res-commentBoxes .comment{margin-bottom:5px!Important;border:1px solid #E7E8EA;overflow:hidden}.multi-page .link .rank{display:none}.multi-page .sidecontentbox .title,.multi-page .sidecontentbox.collapsible .title{border-bottom:0;margin:0;padding:0}
@@ -1584,7 +2025,7 @@ body.with-listing-chooser.listing-chooser-collapsed .footer-parent,body.with-lis
 .multi-page  #header .pagename{bottom:30px!Important;}
 .multi-page .titlebox{padding-bottom: 5px;}
 .multi-page .titlebox .usertext{padding:10px;}
-
+.mod-toolbox .menuarea.modtools{margin:0px 315px 5px 0px!important;}
 /**End Reddit Theme Specific CSS/
 
 

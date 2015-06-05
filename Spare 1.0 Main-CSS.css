@@ -2025,7 +2025,7 @@ body > div.footer-parent > p:nth-child(4):after{
 .res-nightmode .footer{border: 1px solid #0F0E0E;}
 .res-nightmode .footer .col{border-left: 1px solid #0F0E0E;}
 .res-nightmode .footer .col:first-child{border:0;}
-
+.res-nightmode .wiki-page .wiki-page-content .wiki.md{color:#eaeaea!Important;}
 /*Reddit-Theme Specific CSS*/
 
 /**Messages Page**/

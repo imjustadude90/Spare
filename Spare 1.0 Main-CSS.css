@@ -2014,6 +2014,14 @@ div.titlebox>div.bottom>span.flair{display:none;}
 	border-right: 1px solid #191919;
 	background-color: #191919!important;
 }
+/*Spam*/
+.thing.spam{background-color: #fa8072!Important;}
+.spam.link .entry .buttons li a.comments{color:#369!Important;}
+.spam.link .entry .buttons li a{color:#333!Important;}
+.spam.link .tagline{color:#444;}
+.spam.link>.title,{color:#0a78e6!Important}
+.spam.link>.title:hover{text-decoration:underline!Important;}
+
 /*Footer*/
 body > div.footer-parent > p:nth-child(4):after{
 	content: "CSS theme from /r/Spare by /u/Imjustadude90";

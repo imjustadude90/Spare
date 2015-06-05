@@ -1,0 +1,2 @@
+# Spare
+A Subreddit theme

@@ -2024,12 +2024,13 @@ div.titlebox>div.bottom>span.flair{display:none;}
 .spam.link>.title:hover{text-decoration:underline!Important;}
 
 /*Footer*/
-body > div.footer-parent > p:nth-child(4):after{
+body > div.footer-parent:after{
 	content: "CSS theme from /r/Spare by /u/Imjustadude90";
 	padding: 3px 0 0 5px;
 	font-size: 10px;
 	text-align: center;
 	display: block;
+	color:gray;
 }
 .res-nightmode .footer{border: 1px solid #0F0E0E;}
 .res-nightmode .footer .col{border-left: 1px solid #0F0E0E;}

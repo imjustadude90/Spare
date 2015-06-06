@@ -679,14 +679,15 @@ form#search {
 
 .search-page #search input[type=submit]{position:relative; margin-top:0; right:25px;}
 #search input[type=submit]:hover {
-    background: #1882d6 url(%%spritesheet%%);
+	background-color: #1882d6;
+    background-image: url(%%spritesheet%%);
     background-position: 0px -75px;
     box-shadow: 0px 0px 3px #e7e8ea;
 }
 #search input[type=submit]:active {
-    background: #036dc1 url(%%spritesheet%%);
+    background-image: url(%%spritesheet%%);
     background-position: 0px -75px;
-    box-shadow: inset 0px 0px 5px #036dc1;
+    opacity:0.8;
 }
 /**Search Info**/
 

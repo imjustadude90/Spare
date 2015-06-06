@@ -129,6 +129,7 @@ body {
 .sr-bar a.gold {
     color: #e5c100;
 }
+.sr-bar .separator, .separator{color:rgba(255,255,255,0.9)}
 #header {
     border-bottom: 1px solid #e7e8ea;
     position: relative;

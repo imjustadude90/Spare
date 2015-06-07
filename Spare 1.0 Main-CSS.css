@@ -501,24 +501,15 @@ body {
 .commentarea .md blockquote, .link .usertext-body .md blockquote{
 	padding: 5px 8px;
 	background: #f9f9f9;
-	border-left: 5px solid #ccc;
+	border-left: 5px solid #B6D9F4;
 	margin: 10px 15px;
 	font-weight: 300;
 	font-style: italic;
-	text-indent: 10px;
 }
 .res-nightmode .commentarea .md blockquote, .res-nightmode .link .usertext-body .md blockquote{
 	background: #2C2C2C;
 	border-left: 5px solid #424242;
 	color: rgb(204, 204, 204);
-}
-.commentarea .md blockquote:before,  .link .usertext-body .md blockquote:before{
-	content: "";
-	float:left;
-	width: 26px;
-	height: 18px;
-	background: url(%%spritesheet%%) no-repeat;
-	background-position: -93px -102px;
 }
 
 .titlebox {

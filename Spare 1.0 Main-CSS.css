@@ -1,7 +1,7 @@
 /*
 			Version 1.0
 			Stylesheet by Imjustadude90
-			Last modified: 06 June 2015
+			Last modified: 13 June 2015
 			
 -------------------------------------------------------------------------- */
 
@@ -1653,7 +1653,7 @@ background-repeat: no-repeat
 	padding: 10px;
 }
 .res-nightmode .commentarea>.usertext{
-	background-color: #161616;
+	background-color: #202020;
 	border: 1px solid #272727;
 }
 .commentarea .menuarea {
@@ -1692,7 +1692,7 @@ background-repeat: no-repeat
 	overflow: hidden;
 }
 .res-nightmode .commentarea .panestack-title{
-	background-color: #161616;
+	background-color: #202020;
 	border: 1px solid #272727;
 	color:white;
 }
@@ -1857,6 +1857,34 @@ body .comment .comment .comment .comment .comment .comment .comment .comment .co
 .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
     background-color: #F7F7F8!important;
     border-radius: 0 !important;
+}
+.res-nightmode body .comment,
+.res-nightmode body .comment .comment .comment,
+.res-nightmode body .comment .comment .comment .comment .comment,
+.res-nightmode body .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode body .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment .comment
+ {
+    background-color: #202020!important;
+    border-radius: 3px !important;
+}
+
+.res-nightmode .comment .comment,
+.res-nightmode .comment .comment .comment .comment,
+.res-nightmode .comment .comment .comment .comment .comment .comment,
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment,
+.res-nightmode .res-commentBoxes .content .comment .comment .comment .comment .comment .comment .comment .comment .comment .comment {
+    background-color: #161616!important;
+    border-radius: 3px !important;
 }
 /** End Nested Comments **/
 

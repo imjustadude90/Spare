@@ -1,7 +1,7 @@
 /*
-			Spare - Version 1.0
+			Version 1.0
 			Stylesheet by Imjustadude90
-			Last modified: 13 June 2015
+			Last modified: 19 June 2015
 			
 -------------------------------------------------------------------------- */
 
@@ -874,7 +874,7 @@ label+#moresearchinfo {
 .side .spacer .md blockquote h2,
 .side .spacer .md blockquote h3,
 .side .spacer .md blockquote h4,
-.side .spacer .md blockquote h5
+.side .spacer .md blockquote h6
 {
     color: #444;
 	margin: 0px 10px 10px 10px;
@@ -884,7 +884,7 @@ label+#moresearchinfo {
 .res-nightmode .side .spacer .md blockquote h2,
 .res-nightmode .side .spacer .md blockquote h3,
 .res-nightmode .side .spacer .md blockquote h4,
-.res-nightmode .side .spacer .md blockquote h5
+.res-nightmode .side .spacer .md blockquote h6
 {
     color: #fff;
 	border-bottom: 3px solid #777;
@@ -893,7 +893,7 @@ label+#moresearchinfo {
 .side .spacer .md blockquote h2:after,
 .side .spacer .md blockquote h3:after,
 .side .spacer .md blockquote h4:after,
-.side .spacer .md blockquote h5:after{
+.side .spacer .md blockquote h6:after{
   content: "";
   height: 3px;
   background-color: #444;
@@ -906,14 +906,14 @@ label+#moresearchinfo {
 .res-nightmode .side .spacer .md blockquote h2:after,
 .res-nightmode .side .spacer .md blockquote h3:after,
 .res-nightmode .side .spacer .md blockquote h4:after,
-.res-nightmode .side .spacer .md blockquote h5:after{
+.res-nightmode .side .spacer .md blockquote h6:after{
 	background-color: #fff;
 }
 .side .spacer .md blockquote h1:hover:after,
 .side .spacer .md blockquote h2:hover:after,
 .side .spacer .md blockquote h3:hover:after,
 .side .spacer .md blockquote h4:hover:after,
-.side .spacer .md blockquote h5:hover:after
+.side .spacer .md blockquote h6:hover:after
 {
 	width: 256px;
 }
@@ -1013,7 +1013,7 @@ label+#moresearchinfo {
 	border-bottom: solid 8px transparent;
 }
 
-.side .md h5+blockquote {
+.side .md h6+blockquote {
     background-color: #EAEAEA;
     padding: 10px 0px 10px 0px;
     border: 1px solid #D0D0D0;
@@ -1022,7 +1022,7 @@ label+#moresearchinfo {
 	font-weight: normal;
 }
 
-.side .md h5+blockquote:before {
+.side .md h6+blockquote:before {
 	content: "";
 	position: absolute;
 	margin: -11px 0px;
@@ -1037,7 +1037,7 @@ label+#moresearchinfo {
 .res-nightmode .side .md h2+blockquote,
 .res-nightmode .side .md h3+blockquote,
 .res-nightmode .side .md h4+blockquote,
-.res-nightmode .side .md h5+blockquote
+.res-nightmode .side .md h6+blockquote
 {
 	background-color: transparent;
 }
@@ -1045,7 +1045,7 @@ label+#moresearchinfo {
 .res-nightmode .side .md h2+blockquote:before,
 .res-nightmode .side .md h3+blockquote:before,
 .res-nightmode .side .md h4+blockquote:before,
-.res-nightmode .side .md h5+blockquote:before
+.res-nightmode .side .md h6+blockquote:before
 {
 	border-top: solid 8px #202020!Important;
 	border-right: solid 8px #202020!Important;
@@ -1116,7 +1116,7 @@ body > div.content {
   margin-left: -1px;
 }
 .RES-keyNav-activeElement, .commentarea .RES-keyNav-activeElement .md, .commentarea .RES-keyNav-activeElement.entry .noncollapsed {
-    background-color: #transparent !important;
+    background-color: transparent !important;
 }
 /*Thumbnails*/
 
